@@ -1,6 +1,7 @@
 " Set a nicer foldtext function
-set foldmethod=manual
-set foldtext=MyFoldText()
+set foldmethod=indent
+
+" set foldtext=MyFoldText()
 function! MyFoldText()
   let line = getline(v:foldstart)
   if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0

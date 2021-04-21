@@ -1,3 +1,5 @@
+filetype indent on
+
 " TODO: Pick a leader key
 let mapleader = ","
 

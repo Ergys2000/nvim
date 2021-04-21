@@ -43,13 +43,6 @@ set listchars=tab:▸\ ,eol:¬
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-
-" use fzf to find a file
-nnoremap <leader>e :Files<CR>
-
-" use fzf for buffers
-nnoremap <leader>b :Buffers<CR>
-
 " tab mappings
 nnoremap <leader><C-n> :tabnew<CR>
 
@@ -67,7 +60,11 @@ function! LoadView()
   endtry
 endfunction
 
-autocmd BufReadPost *.tsx call LoadView()
-autocmd BufReadPost *.js call LoadView()
-autocmd BufWinLeave *.tsx execute 'mkview'
-autocmd BufWinLeave *.js execute 'mkview'
+" autocmd BufReadPost *.tsx call LoadView()
+" autocmd BufReadPost *.js call LoadView()
+" autocmd BufWinLeave *.tsx execute 'mkview'
+" autocmd BufWinLeave *.js execute 'mkview'
+
+" Map ctrl key to escape only for vim
+au VimEnter * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * silent! !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'

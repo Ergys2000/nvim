@@ -30,9 +30,16 @@ Plug 'itchyny/lightline.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 Plug 'nvim-treesitter/playground'
 
-" Ultisnips + snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Telescope fuzzy finder
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Start up page for vim
+Plug 'mhinz/vim-startify'
+
+" Git wrapper for vim
+Plug 'tpope/vim-fugitive'
 
 
 call plug#end()
@@ -51,3 +58,5 @@ source ~/.config/nvim/vimwiki-config.vim
 source ~/.config/nvim/fold-config.vim
 
 luafile ~/.config/nvim/treesitter-config.lua
+
+source ~/.config/nvim/telescope-config.vim
