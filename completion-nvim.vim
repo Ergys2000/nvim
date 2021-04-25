@@ -16,7 +16,10 @@ set shortmess+=c
 
 " Sort the suggestions by length
 let g:completion_sorting = "length"
+" Set snippet autocompletion to ultisnip
+let g:completion_enable_snippet = "UltiSnips"
 
+" Start autocompletion in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
 
 

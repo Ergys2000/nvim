@@ -41,6 +41,10 @@ Plug 'mhinz/vim-startify'
 " Git wrapper for vim
 Plug 'tpope/vim-fugitive'
 
+" Ultisnips snippet engine
+Plug 'SirVer/ultisnips'
+" Snippets for ultisnips
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
