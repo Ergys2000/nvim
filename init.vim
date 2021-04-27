@@ -5,10 +5,6 @@ Plug 'lifepillar/vim-gruvbox8'
 Plug 'tomasiser/vim-code-dark'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-" File fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 " Focused note taking
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
@@ -48,19 +44,23 @@ Plug 'honza/vim-snippets'
 
 call plug#end()
 
-source ~/.config/nvim/general.vim
-source ~/.config/nvim/keybindings.vim
+source ~/.config/nvim/vimscript/general.vim
+source ~/.config/nvim/vimscript/keybindings.vim
 
-source ~/.config/nvim/limelight-config.vim
+source ~/.config/nvim/vimscript/limelight-config.vim
 
-source ~/.config/nvim/ultisnips-config.vim
+source ~/.config/nvim/vimscript/ultisnips-config.vim
 
-luafile ~/.config/nvim/lsp-config.lua
-source ~/.config/nvim/completion-nvim.vim
+" Language server client config and auto completion config
+luafile ~/.config/nvim/lua/lsp-config.lua
+source ~/.config/nvim/vimscript/completion-nvim.vim
 
-source ~/.config/nvim/vimwiki-config.vim
-source ~/.config/nvim/fold-config.vim
+" Vimwiki and text folding config
+source ~/.config/nvim/vimscript/vimwiki-config.vim
+source ~/.config/nvim/vimscript/fold-config.vim
 
-luafile ~/.config/nvim/treesitter-config.lua
+" Treesitter config
+luafile ~/.config/nvim/lua/treesitter-config.lua
 
-source ~/.config/nvim/telescope-config.vim
+" Telescope fuzzy finder config
+source ~/.config/nvim/vimscript/telescope-config.vim
