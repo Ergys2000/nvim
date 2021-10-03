@@ -13,12 +13,8 @@ nnoremap <C-LEFT> <C-w><
 " Toggle nerd tree
 nnoremap <leader>t :NERDTreeToggle<CR>
 
-" Fold a block of code
-nnoremap <leader>zf $v%zf
-
 " C style comment
-nnoremap <leader>i a/*  */<Esc>2hi
-
+nnoremap <leader>i a/**  */<Esc>2hi
 
 " Move up/down editor lines
 nnoremap j gj
