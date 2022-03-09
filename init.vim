@@ -42,9 +42,6 @@ Plug 'SirVer/ultisnips'
 " Snippets for ultisnips
 Plug 'honza/vim-snippets'
 
-" Java lsp server configuration
-Plug 'mfussenegger/nvim-jdtls'
-
 call plug#end()
 
 source ~/.config/nvim/vimscript/general.vim
@@ -67,8 +64,5 @@ luafile ~/.config/nvim/lua/treesitter-config.lua
 
 " Telescope fuzzy finder config
 source ~/.config/nvim/vimscript/telescope-config.vim
-
-" Java language server configuration
-source ~/.config/nvim/vimscript/jdtls-config.vim
 
 
